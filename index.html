@@ -12,87 +12,141 @@
     }
     
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      line-height: 1.6;
-      color: #333;
-      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-      min-height: 100vh;
-      padding: 20px;
+      font-family: 'Georgia', 'Times New Roman', serif;
+      line-height: 1.7;
+      color: #2c3e50;
+      background: #f8f9fa;
+      padding: 40px 20px;
     }
     
     .container {
-      max-width: 800px;
+      max-width: 850px;
       margin: 0 auto;
-      background: rgba(255, 255, 255, 0.95);
-      backdrop-filter: blur(10px);
-      border-radius: 15px;
-      padding: 30px;
-      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+      background: #ffffff;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+      border: 1px solid #e0e0e0;
     }
     
     header {
-      text-align: center;
-      margin-bottom: 30px;
-      padding-bottom: 20px;
-      border-bottom: 2px solid #667eea;
+      background: #2c3e50;
+      color: white;
+      padding: 40px 50px;
+      text-align: left;
     }
     
-    h1 {
-      color: #2c3e50;
-      font-size: 2.5em;
-      margin-bottom: 10px;
-      font-weight: 700;
+    header h1 {
+      font-size: 2.8em;
+      font-weight: 400;
+      margin-bottom: 8px;
+      letter-spacing: 1px;
+    }
+    
+    header p {
+      font-size: 1.1em;
+      opacity: 0.9;
+      margin-bottom: 5px;
+    }
+    
+    header a {
+      color: #3498db;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    
+    header a:hover {
+      text-decoration: underline;
+    }
+    
+    button {
+      background: #34495e;
+      color: white;
+      border: none;
+      padding: 12px 30px;
+      margin-top: 20px;
+      cursor: pointer;
+      font-size: 0.95em;
+      letter-spacing: 0.5px;
+      transition: background 0.3s ease;
+    }
+    
+    button:hover {
+      background: #2c3e50;
+    }
+    
+    .content {
+      padding: 0 50px 50px 50px;
     }
     
     h2 {
-      color: #667eea;
-      font-size: 1.5em;
-      margin-bottom: 15px;
-      border-left: 4px solid #667eea;
-      padding-left: 15px;
+      color: #2c3e50;
+      font-size: 1.4em;
+      font-weight: 600;
+      margin: 35px 0 20px 0;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      border-bottom: 2px solid #34495e;
+      padding-bottom: 8px;
     }
     
     h3 {
       color: #2c3e50;
-      font-size: 1.2em;
+      font-size: 1.15em;
+      font-weight: 600;
       margin-bottom: 5px;
     }
     
-    section {
-      margin-bottom: 25px;
+    .summary {
+      margin-bottom: 30px;
     }
     
     .summary p {
       font-size: 1.1em;
       text-align: justify;
-      color: #555;
+      color: #34495e;
+      line-height: 1.8;
     }
     
     article {
-      margin-bottom: 20px;
-      padding: 15px;
-      background: rgba(102, 126, 234, 0.05);
-      border-radius: 8px;
-      border-left: 4px solid #667eea;
+      margin-bottom: 25px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid #ecf0f1;
+    }
+    
+    article:last-child {
+      border-bottom: none;
     }
     
     article p {
-      color: #666;
+      color: #7f8c8d;
       font-style: italic;
       margin-bottom: 10px;
+      font-size: 1.05em;
     }
     
     ul {
-      margin-left: 20px;
+      margin-left: 25px;
+      margin-top: 10px;
     }
     
     li {
-      margin-bottom: 5px;
+      margin-bottom: 8px;
+      color: #34495e;
     }
     
     .book-list {
-      margin-left: 20px;
+      margin-left: 25px;
       margin-top: 10px;
+    }
+    
+    .book-list li {
+      color: #34495e;
+      font-size: 0.95em;
+    }
+    
+    .education p {
+      font-size: 1.05em;
+      margin-bottom: 10px;
+      color: #34495e;
     }
     
     .skill-list {
@@ -103,40 +157,23 @@
     .skill-list li {
       display: flex;
       align-items: center;
-      margin-bottom: 12px;
-      padding: 8px;
-      background: rgba(102, 126, 234, 0.05);
-      border-radius: 5px;
+      margin-bottom: 15px;
+      padding: 12px 0;
+      border-bottom: 1px solid #ecf0f1;
     }
     
     .skill-list span {
-      min-width: 250px;
+      min-width: 300px;
       font-weight: 500;
+      color: #2c3e50;
     }
     
     .bar {
-      height: 8px;
-      background: #667eea;
-      border-radius: 4px;
+      height: 6px;
+      background: #34495e;
       flex-grow: 1;
-      margin-left: 15px;
+      margin-left: 20px;
       position: relative;
-      overflow: hidden;
-    }
-    
-    .bar::after {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      height: 100%;
-      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
-      animation: shimmer 2s infinite;
-    }
-    
-    @keyframes shimmer {
-      0% { transform: translateX(-100%); }
-      100% { transform: translateX(100%); }
     }
     
     .bar-90 { width: 90%; }
@@ -145,55 +182,41 @@
     .bar-70 { width: 70%; }
     .bar-60 { width: 60%; }
     
+    .languages p {
+      font-size: 1.1em;
+      color: #34495e;
+      text-align: center;
+      padding: 20px;
+      background: #f8f9fa;
+      border-left: 4px solid #34495e;
+      margin-top: 10px;
+    }
+    
     a {
-      color: #667eea;
+      color: #3498db;
       text-decoration: none;
       font-weight: 500;
-      transition: color 0.3s ease;
     }
     
     a:hover {
-      color: #764ba2;
       text-decoration: underline;
     }
     
-    button {
-      background: linear-gradient(45deg, #667eea, #764ba2);
-      color: white;
-      border: none;
-      padding: 12px 24px;
-      border-radius: 25px;
-      cursor: pointer;
-      font-size: 1em;
-      font-weight: 500;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      margin-top: 15px;
-    }
-    
-    button:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
-    }
-    
-    .languages p {
-      font-size: 1.1em;
-      text-align: center;
-      padding: 15px;
-      background: rgba(102, 126, 234, 0.05);
-      border-radius: 8px;
-    }
-    
-    @media (max-width: 600px) {
+    @media (max-width: 768px) {
       .container {
-        padding: 20px;
+        margin: 0 10px;
       }
       
-      h1 {
-        font-size: 2em;
+      header, .content {
+        padding: 30px 25px;
+      }
+      
+      header h1 {
+        font-size: 2.2em;
       }
       
       .skill-list span {
-        min-width: 180px;
+        min-width: 200px;
       }
     }
   </style>
@@ -204,111 +227,108 @@
       <h1>Alec Makarov</h1>
       <p>Odessa, Ukraine · Age: 38</p>
       <p><a href="https://www.linkedin.com/in/alec-makarov" target="_blank">LinkedIn Profile</a></p>
-      <p>Telegram: <a href="https://t.me/al_digriz" target="_blank">@al_digriz</a></p>
       <button onclick="window.print()">📄 Download PDF</button>
     </header>
 
-    <section class="summary">
-      <h2>Summary</h2>
-      <p>Experienced IT and legal specialist with a hybrid background in public service, digital infrastructure, and legal compliance. Strong analytical mindset, systems thinking, and hands-on experience in both finance and software environments.</p>
-    </section>
+    <div class="content">
+      <section class="summary">
+        <h2>Professional Summary</h2>
+        <p>Experienced IT and legal specialist with a hybrid background in public service, digital infrastructure, and legal compliance. Strong analytical mindset, systems thinking, and hands-on experience in both finance and software environments.</p>
+      </section>
 
-<section class="skills">
-      <h2>Hard Skills</h2>
-      <ul class="skill-list">
-        <li><span>AI Prompt-Engineering (C / Objective C / C++ / Python)</span><div class="bar bar-90"></div></li>
-        <li><span>Wordpress / CMS management</span><div class="bar bar-90"></div></li>
-        <li><span>HTML/CSS</span><div class="bar bar-90"></div></li>
-        <li><span>JavaScript</span><div class="bar bar-70"></div></li>
-        <li><span>MS Office / 1C / Prozorro</span><div class="bar bar-80"></div></li>
-        <li><span>Linux / Windows / Windows Server / VMWare / MacOS</span><div class="bar bar-75"></div></li>
-        <li><span>Adobe / Corel / Databases</span><div class="bar bar-60"></div></li>
-      </ul>
-      <h2>Soft Skills</h2>
-      <p>Сommunication skills, teamwork, mentoring (training new employees, tutoring), self- and time management, ability to keep records</p>
-    </section>
+      <section class="experience">
+        <h2>Professional Experience</h2>
 
-    <section class="experience">
-      <h2>Experience</h2>
-
-      <article>
-        <h3>Head of IT sector (2022–2024)</h3>
-        <p>Subdivision of Odesa State Administration</p>
-        <ul>
-          <li>Oversaw IT infrastructure, software, and networking for public document systems.</li>
-        </ul>
-      </article>
-
-      <article>
-        <h3>Chief Financial Specialist (2020–2021)</h3>
-        <p>Ministry of Justice, Odesa</p>
-        <ul>
-          <li>Budget planning, contract management, procurement and financial reporting.</li>
-        </ul>
-      </article>
-
-      <article>
-        <h3>Computer Systems Engineer (2018–2019)</h3>
-        <p>Odessa City Council</p>
-        <ul>
-          <li>Maintained traffic management and IT systems / Microsoft Server and CCTV tools.</li>
-        </ul>
-      </article>
-
-      <article>
-        <h3>Payment Terminal Maintenance Engineer (2013–2017)</h3>
-        <p>Private Entrepreneur</p>
-        <ul>
-          <li>Linux-based terminal support and troubleshooting.</li>
-        </ul>
-</article>
-<article>
-   <h3>Lawyer (2010–2012)</h3>
-  <p>Privatbank & Odessa Architecture Inspectorate</p>
-   <ul>
-     <li> court representation (for the state)</li>
-     </ul>
- </article>
-
-      </article>
-    </section>
-
-    <section class="education">
-      <h2>Education</h2>
-      <p>🎓 Odesa State University of Economics – Master in Finance (2009–2011)</p>
-      <p>🎓 International Humanities University – Master of Laws (2004–2008)</p>
-    </section>
-
-    <section class="additional">
-      <h2>Additional Education</h2>
-      <ul>
-        <li>
-          <strong>Self Education</strong>
-          <ul class="book-list">
-            <li>📘 Matt Galloway — <em>Effective Objective-C</em></li>
-            <li>📗 Aaron Hillegass — <em>Objective-C Programming</em></li>
-            <li>📙 Brian Kernighan — <em>The C Programming Language</em></li>
-            <li>📘 Bjarne Stroustrup — <em>The C++ Programming Language</em></li>
-            <li>📗 Mark Summerfield — <em>Programming in Python 3</em></li>
-            <li>📙 Andy Oppel — <em>Databases Demystified (SQL)</em></li>
+        <article>
+          <h3>Head of IT Sector</h3>
+          <p>Subdivision of Odessa State Administration · 2022–2024</p>
+          <ul>
+            <li>Oversaw IT infrastructure, software, and networking for public document systems.</li>
           </ul>
-        </li>
-        <li>💻 Server Computer College (1999) – Computer Graphics & Internet Technologies</li>
-      </ul>
+        </article>
 
-      <h2>Certificates</h2>
-      <ul>
-        <li>
-          🎓 Beetroot Academy (2017) – Junior Front End Developer 
-          (<a href="beetroot.pdf" target="_blank">Certificate</a>)
-        </li>
-      </ul>
-    </section>
+        <article>
+          <h3>Chief Financial Specialist</h3>
+          <p>Ministry of Justice, Odesa · 2020–2021</p>
+          <ul>
+            <li>Budget planning, contract management, procurement and financial reporting.</li>
+          </ul>
+        </article>
 
-    <section class="languages">
-      <h2>Languages</h2>
-      <p>🇺🇦 Ukrainian(Russian) – Fluent | 🇬🇧 English – Fluent</p>
-    </section>
+        <article>
+          <h3>Computer Systems Engineer</h3>
+          <p>Odessa City Council · 2018–2019</p>
+          <ul>
+            <li>Maintained traffic management and IT systems / Microsoft Server and CCTV tools.</li>
+          </ul>
+        </article>
+
+        <article>
+          <h3>Payment Terminal Maintenance Engineer</h3>
+          <p>Private Entrepreneur · 2013–2017</p>
+          <ul>
+            <li>Linux-based terminal support and troubleshooting.</li>
+          </ul>
+        </article>
+
+        <!-- <article>
+          <h3>Lawyer</h3>
+          <p>Privatbank & Odessa Architecture Inspectorate · 2010–2012</p>
+          <ul>
+            <li>Handled bankruptcy litigation / court representation for the state.</li>
+          </ul>
+        </article> -->
+      </section>
+
+      <section class="education">
+        <h2>Education</h2>
+        <p>🎓 Odesa State University of Economics – Master in Finance (2009–2011)</p>
+        <p>🎓 International Humanities University – Master of Laws (2004–2008)</p>
+      </section>
+
+      <section class="additional">
+        <h2>Additional Education</h2>
+        <ul>
+          <li>
+            <strong>Recently read books (Self-study)</strong>
+            <ul class="book-list">
+              <li>Matt Galloway — <em>Effective Objective-C</em></li>
+              <li>Aaron Hillegass — <em>Objective-C Programming</em></li>
+              <li>Brian Kernighan — <em>The C Programming Language</em></li>
+              <li>Bjarne Stroustrup — <em>The C++ Programming Language</em></li>
+              <li>Mark Summerfield — <em>Programming in Python 3</em></li>
+              <li>Andy Oppel — <em>Databases Demystified (SQL)</em></li>
+            </ul>
+          </li>
+          <li>Server Computer College (1999) – Computer Graphics & Internet Technologies</li>
+        </ul>
+
+        <h2>Professional Certificates</h2>
+        <ul>
+          <li>
+            🎓 Beetroot Academy (2017) – Junior Front End Developer 
+            (<a href="beetroot.pdf" target="_blank">Certificate</a>)
+          </li>
+        </ul>
+      </section>
+
+      <section class="skills">
+        <h2>Technical Skills</h2>
+        <ul class="skill-list">
+          <li><span>AI Prompt-Engineering (C / Objective C / C++ / Python)</span><div class="bar bar-90"></div></li>
+          <li><span>HTML/CSS</span><div class="bar bar-90"></div></li>
+          <li><span>JavaScript</span><div class="bar bar-70"></div></li>
+          <li><span>MS Office / 1C / Prozorro</span><div class="bar bar-80"></div></li>
+          <li><span>Linux / Windows / VMWare / MacOS</span><div class="bar bar-75"></div></li>
+          <li><span>Adobe / Corel / Databases</span><div class="bar bar-60"></div></li>
+        </ul>
+      </section>
+
+      <section class="languages">
+        <h2>Languages</h2>
+        <p>Ukrainian (Russian) – Fluent | English – Fluent</p>
+      </section>
+    </div>
   </main>
 </body>
 </html>
